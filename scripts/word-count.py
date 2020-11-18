@@ -25,4 +25,4 @@ if __name__ == "__main__":
     
     sc.stop()
     
-# spark-submit --deploy-mode cluster --master yarn --num-executors <num-executors> --executor-cores <executor-cores> --executor-memory <executor-memory> –conf spark.yarn.submit.waitAppCompletion=true word-count.py <input-textfile> <output-textfile>
+# spark-submit --deploy-mode cluster --master yarn --num-executors <num-executors> --executor-cores <executor-cores> --executor-memory <executor-memory> --conf spark.yarn.submit.waitAppCompletion=true word-count.py <input-textfile> <output-textfile>

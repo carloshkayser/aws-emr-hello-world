@@ -1,10 +1,12 @@
 #!/bin/bash
 
+echo "Running on `hostname`"
+
 hdfs dfs -mkdir -p /home/hadoop/$2
 
 wget https://raw.githubusercontent.com/carloshkayser/aws-emr-hello-world/master/scripts/lorem-ipsum-generator.py
 
-python lorem-ipsum-generator.py $1 $2
+python3 lorem-ipsum-generator.py $1 $2
 
 echo "Copying file to Hadoop..."
 

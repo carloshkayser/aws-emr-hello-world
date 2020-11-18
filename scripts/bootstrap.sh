@@ -4,7 +4,7 @@ cd ~
 
 sudo yum install -y git
 
-pip install --user loremipsum boto3
+sudo python3 -m pip install loremipsum boto3
 
 # aws s3 sync $1 .
 git clone https://github.com/carloshkayser/aws-emr-hello-world
