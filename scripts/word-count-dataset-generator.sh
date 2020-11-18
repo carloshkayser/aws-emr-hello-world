@@ -1,15 +1,16 @@
 #!/bin/bash
 
-hdfs dfs -rm -r /data/$2
-hdfs dfs -mkdir /data/$2
+hdfs dfs -mkdir -p /home/hadoop/$2
+
+wget https://raw.githubusercontent.com/carloshkayser/aws-emr-hello-world/master/scripts/lorem-ipsum-generator.py
 
 python lorem-ipsum-generator.py $1 $2
 
 echo "Copying file to Hadoop..."
 
-hdfs dfs -put $2 /data/$2
+hdfs dfs -put $2 /home/hadoop/$2
 
-hdfs dfs -ls /data/$2
+hdfs dfs -ls /home/hadoop/$2
 
 rm $2
 

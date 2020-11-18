@@ -13,7 +13,7 @@ if __name__ == "__main__":
     
     paragraphs = int(sys.argv[1])
     
-    print(f'Generating dataset of {paragraphs}')
+    print('Generating dataset of {0}'.format(paragraphs))
 
     paragraphs_list = get_paragraphs(paragraphs)
 
